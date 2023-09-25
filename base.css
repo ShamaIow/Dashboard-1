@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #27292D;
+    width: 100%;
+    height: 100vh;
+}
+
+.content-struct {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5em;
+}
+
+.sidebar {
+    background-color: #1F2125;
+}
+
+.sidebar-profile {
+    display: grid;
+    grid-template-columns: 0.5fr 3fr 1fr;
+    align-items: center;
+    column-gap: 1em;
+    word-wrap: break-word;
+    padding: 0.75em;
+}
+
+.sidebar-profile > img {
+    border-radius: 50px ;
+    object-fit: cover;
+}
+
+.sidebar-profile > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-logout {
+    background-color: #02AF72;
+    border: none;
+    color: white;
+    padding: 0.75em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 0.25em 0.25em;
+    cursor: pointer;
+    border-radius: 0.5em;
+    transition-duration: 0.4s;
+    box-shadow: 0 0 10px #02AF72;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+.sidebar-menu-category {
+    display: flex;
+    flex-direction: column;
+    color: #A4A6AB;
+    margin: 0.5em 0;
+}
+
+.sidebar-menu-category > span {
+    font-size: 0.8em;
+    margin-bottom: 0.5em;
+}
+
+.sidebar-menu-category > a {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: #A4A6AB;
+    padding: 0.75em;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 0.25em 0.25em;
+    cursor: pointer;
+    border-radius: 0.5em;
+    transition-duration: 0.4s;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-menu-category > a > i {
+    margin-right: 0.5em;
+}
+
+.sidebar-menu-category > a > label {
+    color: white;
+}
+
+.sidebar-menu-category > a.active {
+    color: white;
+    background-color: #02AF72;
+    box-shadow: 0 0 10px #02AF72;
+}
+
+.sidebar-menu-category > a:hover {
+    color: white;
+    background-color: #02AF72;
+    box-shadow: 0 0 10px #02AF72;
+}
+
+.content {
+    background-color: #16171B;
+    padding: 2.5em;
+}
+
+.content > div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.statistics {
+    background-color: #1F2125;
+    border-radius: 12px;
+}
+
+.statistic {
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+.statistic > div > label {
+    color: #A4A6AB;
+    font-size: 0.8em;
+    margin-bottom: 0.5em;
+}
+
+.statistic > div > h1 {
+    color: white;
+    font-size: 1.5em;
+}
+
+.statistic > div > span {
+    display: flex;
+    align-items: center;
+    color: #A4A6AB;
+    font-size: 0.8em;
+}
+
+.statistic > .statistic-truc {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.statistic > div > .statistic-logo {
+    background-color: #12664E;
+    font-size: 0.9em;
+    margin-right: 0.5em;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.3;
+}
+
+.statistic > div > span > i {
+    color: #00ff55;
+}
+
+.statistic > div > .statistic-percentage {
+    color: #02AF72;
+}
+
+.dashboard-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.audience {
+    background-color: #1F2125;
+    padding: 1.5em;
+    border-radius: 0.5em;
+    margin-bottom: 1em;
+}
+
+.audience > label {
+    color: #A4A6AB;
+    margin-bottom: 0.5em;
+}
+
+.audience > h1 {
+    color: white;
+    font-size: 1.5em;
+}
+
+.audience > .audience-truc {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.audience > div > .audience-logo {
+    background-color: #12664E;
+    font-size: 0.9em;
+    margin-right: 0.5em;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.3;
+}
+
+.audience > div > .audience-percentage {
+    color: #02AF72;
+}
+
+.audience > canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.audience-satisfaction {
+    background-color: #1F2125;
+    padding: 1.5em;
+    border-radius: 0.5em;
+    margin-bottom: 1em;
+}
+
+.audience-satisfaction-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    color: #A4A6AB;
+    margin-bottom: 0.5em;
+}
+
+.audience-satisfaction-header > a {
+    color: #02AF72;
+    text-decoration: none;
+}
+
+.audience-satisfaction-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    color: #A4A6AB;
+    margin-top: 0.5em;
+}
+
+.p-episods {
+    background-color: #1F2125;
+    padding: 1.5em;
+    border-radius: 0.5em;
+}
+
+.p-episods-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    color: #A4A6AB;
+    margin-bottom: 0.5em;
+}
+
+.p-episods-header > a {
+    color: #02AF72;
+    text-decoration: none;
+}
+
+.p-episods-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.p-episods-grid > div {
+    display: grid;
+    grid-template-columns: 0.35fr 3fr 1.15fr;
+    align-items: center;
+    column-gap: 1em;
+    word-wrap: break-word;
+    padding: 0.75em;
+}
+
+.p-episods-grid > div > .p-episods-p1 {
+    display: flex;
+    justify-content: center;
+    background-color: #48494D;
+    border-radius: 5px;
+    color: #A4A6AB;
+    padding: 0.35rem;
+}
+
+.p-episods-grid > div > .p-episods-p2 h2 {
+    font-weight: 500;
+    font-size: 1.2em;
+    color: white;
+}
+
+.p-episods-grid > div > .p-episods-p2 label {
+    color: #A4A6AB;
+}
+
+.p-episods-grid > div > .p-episods-p3 {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.p-episods-grid > div > .p-episods-p3 > label {
+    color: #A4A6AB;
+}
+
+.p-episods-grid > div > .p-episods-p3 > a {
+    color: #02AF72;
+    text-decoration: none;
+}
+
+.webinars {
+    background-color: #02AF72;
+    box-shadow: 0 0 10px #02AF72;
+    padding: 2em;
+    border-radius: 0.5em;
+    max-width: 350px;
+}
+
+.webinars-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    color: #A4A6AB;
+    margin-bottom: 0.5em;
+}
+
+.webinars-header > a {
+    color: white;
+    text-decoration: none;
+}
+
+.webinars h2 {
+    text-wrap: break-word;
+    font-weight: 500;
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: 0.5em;
+}
+
+.webinars label {
+    text-wrap: break-word;
+    color: white;
+}
+
+.webinars-footer {
+    margin-top: 5em;
+}
+
+.webinars-footer > a {
+    color: white;
+    text-decoration: none;
+} 

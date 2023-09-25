@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin dashboard</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js" integrity="sha512-7U4rRB8aGAHGVad3u2jiC7GA5/1YhQcQjxKeaVms/bT66i3LVBMRcBI9KwABNWnxOSwulkuSXxZLGuyfvo7V1A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="content-struct">
+        <div class="sidebar">
+            <div class="sidebar-profile">
+                <img src="img/sus.png" alt="profile-pic" width="50" height="50">
+                <div>
+                    <label style="color: white;">Jean-luc Mélenchon</label>
+                    <label style="color: gray;">Admin</label>
+                </div>
+                <a href="#" class="sidebar-logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                </a>
+            </div>
+            <div class="sidebar-menu">
+                <div class="sidebar-menu-category">
+                    <a href="#" class="sidebar-menu-item active">
+                        <i class="fas fa-inbox"></i>
+                        <label>Inbox</label>
+                    </a>
+                    <a href="#" class="sidebar-menu-item">
+                        <i class="fas fa-bell"></i>
+                        <label>Alerts</label>
+                    </a>
+                    <a href="#" class="sidebar-menu-item">
+                        <i class="fas fa-chart-line"></i>
+                        <label>Overview</label>
+                    </a>
+                </div>
+                <div class="sidebar-menu-category">
+                    <label>Podcasts</label>
+                    <a href="#" class="sidebar-menu-item">
+                        <i class="fas fa-video"></i>
+                        <label>Episods</label>
+                    </a>
+                    <a href="#" class="sidebar-menu-item">
+                        <i class="fas fa-photo-video"></i>
+                        <label>Media</label>
+                    </a>
+                    <a href="#" class="sidebar-menu-item">
+                        <i class="fas fa-book"></i>
+                        <label>Materials</label>
+                    </a>
+                    <a href="#" class="sidebar-menu-item">
+                        <i class="fas fa-address-book"></i>
+                        <label>Contacts</label>
+                    </a>
+                </div>
+                <div class="sidebar-menu-category">
+                    <label>Analytics</label>
+                    <a href="#" class="sidebar-menu-item">
+                        <i class="fas fa-users"></i>
+                        <label>Subscribers</label>
+                    </a>
+                    <a href="#" class="sidebar-menu-item">
+                        <i class="fas fa-tv"></i>
+                        <label>Channels</label>
+                    </a>
+                    <a href="#" class="sidebar-menu-item">
+                        <i class="fas fa-code-branch"></i>
+                        <label>Integrations</label>
+                    </a>
+                    <a href="#" class="sidebar-menu-item">
+                        <i class="fas fa-chart-pie"></i>
+                        <label>Reports</label>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="statistics">
+                <div class="statistic">
+                    <div>
+                        <label>New Subscribers</label>
+                        <h1>5.097</h1>
+                    </div>
+                    <div class="statistic-truc">
+                        <span class="statistic-logo"><i class="fas fa-chart-line"></i></span>
+                        <span class="statistic-percentage">+33.45%</span>
+                    </div>
+                </div>
+                <div class="statistic">
+                    <div>
+                        <label>Streams</label>
+                        <h1>47,403</h1>
+                    </div>
+                    <div class="statistic-truc">
+                        <span class="statistic-logo"><i class="fas fa-chart-line"></i></span>
+                        <span class="statistic-percentage">+112.45%</span>
+                    </div>
+                </div>
+                <div class="statistic">
+                    <div>
+                        <label>Engagement Rate</label>
+                        <h1>25.81</h1>
+                    </div>
+                    <div class="statistic-truc">
+                        <span class="statistic-logo"><i class="fas fa-chart-line"></i></span>
+                        <span class="statistic-percentage">+62.42%</span>
+                    </div>
+                </div>
+                <div class="statistic">
+                    <div>
+                        <label>New Subscribers</label>
+                        <h1>5.097</h1>
+                    </div>
+                    <div class="statistic-truc">
+                        <span class="statistic-logo"><i class="fas fa-chart-line"></i></span>
+                        <span class="statistic-percentage">+7.2%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="dashboard-grid">
+                <div class="dgrid-left">
+                    <div class="audience">
+                        <label>Audience</label>
+                        <h1>301,097</h1>
+                        <div class="audience-truc">
+                            <span class="audience-logo"><i class="fas fa-chart-line"></i></span>
+                            <span class="audience-percentage">+7.2%</span>
+                            <span style="margin-left: 0.5rem; color: #A4A6AB;">for 7 last days</span>
+                        </div>
+                        <canvas id="audience-chart"></canvas>
+                    </div>
+                    <div class="p-episods">
+                        <div class="p-episods-header">
+                            <label>Pouplar episods</label>
+                            <a href="#">See all</a>
+                        </div>
+                        <div class="p-episods-grid">
+                            <div>
+                                <div class="p-episods-p1"><label>1</label></div>
+                                <div class="p-episods-p2">
+                                    <h2>Kuji Podcast 33: Live</h2>
+                                    <label>Guest: Nurian Saburov</label>
+                                </div>
+                                <div class="p-episods-p3">
+                                    <label>1,99m</label>
+                                    <a href="#">Live</a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="p-episods-p1"><label>1</label></div>
+                                <div class="p-episods-p2">
+                                    <h2>Kuji Podcast 33: Live</h2>
+                                    <label>Guest: Nurian Saburov</label>
+                                </div>
+                                <div class="p-episods-p3">
+                                    <label>4,85m</label>
+                                    <a href="#">Live</a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="p-episods-p1"><label>1</label></div>
+                                <div class="p-episods-p2">
+                                    <h2>Kuji Podcast 33: Live</h2>
+                                    <label>Guest: Nurian Saburov</label>
+                                </div>
+                                <div class="p-episods-p3">
+                                    <label>2,07m</label>
+                                    <a href="#">Live</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dgrid-right">
+                    <div class="audience-satisfaction">
+                        <div class="audience-satisfaction-header">
+                            <label>Audience Satisfaction</label>
+                            <a href="#" class="as-dropdown">
+                                <i class="fas fa-chevron-down"></i>
+                            </a>
+                        </div>
+                        <canvas id="audience-satisfaction-chart"></canvas>
+                        <div class="audience-satisfaction-footer">
+                            <label>0%</label>
+                            <label>Based on likes / dislikes</label>
+                            <label>100%</label>
+                        </div>
+                    </div>
+                    <div class="webinars">
+                        <div class="webinars-header">
+                            <label>Webinars</label>
+                            <a href="#" class="as-dropdown">
+                                <i class="fas fa-chevron-down"></i>
+                            </a>
+                        </div>
+                        <h2>Learn how you can earn more then 20% each month</h2>
+                        <label>Join our webinar and learn how to increase more then 20% your monthly income</label>
+                        <div class="webinars-footer">
+                            <a href="#">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
